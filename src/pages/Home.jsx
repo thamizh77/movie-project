@@ -14,11 +14,11 @@ const Home = () => {
 const [search, setsearch] = useState("")
   useEffect(() => {
     
-let url = `https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/movie/popular?page=${page}&api_key=4b38b713d682630cd122b7bfdc29be9f`;
+let url = `https://api.themoviedb.org/3/movie/popular?page=${page}&api_key=4b38b713d682630cd122b7bfdc29be9f`;
 
     
     if (search) {
-      url = `https://cors-anywhere.herokuapp.com/https://api.themoviedb.org/3/search/movie?query=${search}&api_key=4b38b713d682630cd122b7bfdc29be9f`;
+      url = `https://api.themoviedb.org/3/search/movie?query=${search}&api_key=4b38b713d682630cd122b7bfdc29be9f`;
     }
     fetch(url)
       .then((response) => response.json())
